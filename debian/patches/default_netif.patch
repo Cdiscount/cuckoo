@@ -1,0 +1,11 @@
+--- a/conf/auxiliary.conf
++++ b/conf/auxiliary.conf
+@@ -8,7 +8,7 @@
+ 
+ # Specify the network interface name on which tcpdump should monitor the
+ # traffic. Make sure the interface is active.
+-interface = vboxnet0
++interface = virtbr0
+ 
+ # Specify a Berkeley packet filter to pass to tcpdump.
+ # bpf = not arp

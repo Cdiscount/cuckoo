@@ -1,0 +1,6 @@
+/etc/cuckoo
+/var/log/cuckoo
+/usr/share/cuckoo
+/var/lib/cuckoo/db
+/var/lib/cuckoo/data
+/var/lib/cuckoo/storage

@@ -1,0 +1,13 @@
+agent              usr/share/cuckoo/
+analyzer           usr/share/cuckoo/
+cuckoo.py          usr/share/cuckoo/
+data/*             var/lib/cuckoo/data/
+docs               usr/share/cuckoo/
+lib                usr/share/cuckoo/
+modules            usr/share/cuckoo/
+README.md          usr/share/cuckoo/
+requirements.txt   usr/share/cuckoo/
+tests              usr/share/cuckoo/
+utils              usr/share/cuckoo/
+web                usr/share/cuckoo/
+conf/*             etc/cuckoo/

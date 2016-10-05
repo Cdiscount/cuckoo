@@ -1,0 +1,29 @@
+Source: cuckoo
+Section: misc
+Priority: optional
+Maintainer: Rémi BUISSON <remi.buisson@cdiscount.com>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.9.5
+
+Package: cuckoo
+Architecture: any
+Depends: python-sqlalchemy,
+         python-bson,
+         python-jinja2,
+         python-pymongo (>= 2.7), python-pymongo (<< 3.0),
+         python-bottle,
+         python-pefile,
+         python-django,
+         python-chardet,
+         python-nose,
+         python-distorm3
+Suggests: python-libvirt, libvirt-daemon, libvirt-bin, tcpdump, python-volatility
+Description: In three words, Cuckoo Sandbox is a malware analysis system.
+
+Package: cuckoo-libvirt
+Architecture: any
+Depends: cuckoo,
+         python-libvirt,
+         libvirt-daemon,
+         libvirt-bin
+Description: Cuckoo Sandbox with libvirt.
