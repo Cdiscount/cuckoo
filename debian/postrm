@@ -1,14 +1,18 @@
 #!/bin/sh
 
-set -e
-
 case "$1" in
     remove|purge)
         if [ "x"$2 != "x" ]; then
             # we are doing an upgrade
             exit 0
         fi
-        cat /etc/shadow | awk -F ':' '{ print $1 }' | grep -E '^cuckoo$' > /dev/null && userdel cuckoo
+        cat /etc/shadow | awk -F ':' '{ print $1 }' | grep -E '^cuckoo$' > /dev/null
+        if [ $? -eq 0 ]; then
+            userdel cuckoo && groupdel cuckoo
+            if [ $? -ne 0 ]; then
+                echo "Please stop cuckoo running processes and run userdel cuckoo && groupdel cuckoo afterwards"
+            fi
+        fi
         ;;
 
     upgrade|deconfigure)

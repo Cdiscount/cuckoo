@@ -1,0 +1,32 @@
+--- a/utils/dist.py
++++ b/utils/dist.py
+@@ -14,6 +14,9 @@
+ import time
+ from datetime import datetime
+ 
++sys.path.append(os.path.join(os.path.abspath(os.path.dirname(__file__)), ".."))
++from lib.cuckoo.common.config import Config
++
+ INTERVAL = 30
+ MINIMUMQUEUE = 500
+ RESET_LASTCHECK = 100
+@@ -604,7 +607,6 @@
+     p.add_argument("host", nargs="?", default="0.0.0.0", help="Host to listen on")
+     p.add_argument("port", nargs="?", type=int, default=9003, help="Port to listen on")
+     p.add_argument("-d", "--debug", action="store_true", help="Enable debug logging")
+-    p.add_argument("--db", type=str, default="sqlite:///dist.db", help="Database connection string")
+     p.add_argument("--samples-directory", type=str, required=True, help="Samples directory")
+     p.add_argument("--uptime-logfile", type=str, help="Uptime logfile path")
+     p.add_argument("--report-formats", type=str, required=True, help="Reporting formats to fetch")
+@@ -632,7 +634,10 @@
+ 
+     RUNNING, STATUSES = True, {}
+ 
+-    app = create_app(database_connection=args.db)
++    cfg = Config()
++    db_conn_str = cfg.get('database').get('connection', 'sqlite:///dist.db')
++
++    app = create_app(database_connection=db_conn_str)
+     app.config["SAMPLES_DIRECTORY"] = args.samples_directory
+     app.config["UPTIME_LOGFILE"] = args.uptime_logfile
+     app.config["REPORT_FORMATS"] = report_formats

@@ -1,4 +1,4 @@
 [Service]
 User=cuckoo
 EnvironmentFile=-/etc/default/cuckoo
-ExecStart=/usr/bin/python /usr/share/cuckoo/cuckoo.py ${CUCKOO_ARGS}
+ExecStart=/usr/bin/python /usr/share/cuckoo/cuckoo.py $CUCKOO_ARGS

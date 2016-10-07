@@ -1,3 +1,6 @@
 # Defaults file for CUCKOO
 
 CUCKOO_ARGS="-q"
+CUCKOO_RESTAPI_ARGS="--host 0.0.0.0"
+CUCKOO_PROCESS_ARGS="auto"
+CUCKOO_DISTRIBUTED_ARGS="--samples-directory /tmp/cuckoo/samples/ --reports-directory /tmp/cuckoo/reports --report-formats json"

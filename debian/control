@@ -2,7 +2,7 @@ Source: cuckoo
 Section: misc
 Priority: optional
 Maintainer: Rémi BUISSON <remi.buisson@cdiscount.com>
-Build-Depends: debhelper (>= 4.0.0)
+Build-Depends: debhelper (>= 4.0.0), dh-systemd (>= 1.5)
 Standards-Version: 3.9.5
 
 Package: cuckoo
@@ -27,3 +27,25 @@ Depends: cuckoo,
          libvirt-daemon,
          libvirt-bin
 Description: Cuckoo Sandbox with libvirt.
+
+Package: cuckoo-restapi
+Architecture: any
+Depends: cuckoo,
+         python-mysqldb,
+Description: Cuckoo Sandbox REST api.
+
+Package: cuckoo-distributed
+Architecture: any
+Depends: cuckoo,
+         python-mysqldb,
+         python-flask,
+         python-flask-sqlalchemy,
+         python-flask-restful,
+         python-requests
+Description: Cuckoo Sandbox distributed.
+
+Package: cuckoo-process
+Architecture: any
+Depends: cuckoo
+Description: Cuckoo Sandbox process script.
+

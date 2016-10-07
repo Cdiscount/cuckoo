@@ -1,3 +1,9 @@
+cuckoo (1.2-2) stable; urgency=medium
+
+  * REST API + distributed + process
+
+ -- Rémi BUISSON <remi.buisson@cdiscount.com>  Fri, 07 Oct 2016 09:48:47 +0200
+
 cuckoo (1.2-1) stable; urgency=medium
 
   * Initial release.
