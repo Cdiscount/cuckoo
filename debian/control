@@ -16,7 +16,10 @@ Depends: python-sqlalchemy,
          python-django,
          python-chardet,
          python-nose,
-         python-distorm3
+         python-distorm3,
+         python-yara,
+         python-dpkt,
+         python-pydeep
 Suggests: python-libvirt, libvirt-daemon, libvirt-bin, tcpdump, python-volatility
 Description: In three words, Cuckoo Sandbox is a malware analysis system.
 

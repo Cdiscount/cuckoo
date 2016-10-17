@@ -1,3 +1,9 @@
+cuckoo (1.2-3) stable; urgency=medium
+
+  * Forgot dependencies
+
+ -- Rémi BUISSON <remi.buisson@cdiscount.com>  Mon, 17 Oct 2016 13:13:23 +0200
+
 cuckoo (1.2-2) stable; urgency=medium
 
   * REST API + distributed + process
