@@ -52,3 +52,8 @@ Architecture: any
 Depends: cuckoo
 Description: Cuckoo Sandbox process script.
 
+Package: cuckoo-webui
+Architecture: any
+Depends: cuckoo,
+         python-mysqldb,
+Description: Cuckoo Sandbox WEB ui.

@@ -1,0 +1,5 @@
+[Service]
+User=cuckoo
+EnvironmentFile=-/etc/default/cuckoo
+WorkingDirectory=/usr/share/cuckoo/web
+ExecStart=/usr/bin/python manage.py runserver $CUCKOO_WEBUI_ARGS
